@@ -1,0 +1,115 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    display: grid;
+    grid-template-rows: 10vh 1fr 10vh;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+
+}
+header {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(37, 204, 247, 1.0);
+    animation-name: translate1;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("/img/d.png") no-repeat;
+    background-size: cover;
+    background-position-x: -100px;
+    animation-name: xuanzhuan;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-direction: alternate;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+main div {
+    width: 80vw;
+    font-size: 1.5em;
+    padding: 10px;
+    border: solid 2px rgba(55, 66, 250, 1.0);
+    border-radius: 15px;
+    color: rgba(27, 20, 100, 1.0);
+    box-shadow: 0 0 15px rgba(255, 71, 87, 1.0);
+    opacity: 0.91;
+}
+main div:nth-child(1) {
+    background: rgba(83, 82, 237, 1.0);
+    transform: translateY(-25px);
+}
+main div:nth-child(2) {
+    background: rgba(46, 213, 115, 1.0);
+    transform: translateY(-10px);
+}
+.dop{
+    opacity: 0;
+}
+.d3{
+    animation-name: divop;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.d4{
+    animation-name: divop;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+footer {
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    background: rgba(123, 237, 159, 1.0);
+    animation-name: translate2;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+@keyframes translate1 {
+    from {
+        transform: translatex(-100vw);
+    }
+    to {
+        transform: translatex(0vw);
+    }
+}
+@keyframes translate2 {
+    from {
+        opacity: 0;
+        transform: translatex(100vw);
+    }
+    to {
+        opacity: 1;
+        transform: translatex(0vw);
+    }
+}
+@keyframes divop {
+    to {
+        opacity: 1;
+    }
+}
+@keyframes xuanzhuan {
+    from {
+        transform: translateY(600px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

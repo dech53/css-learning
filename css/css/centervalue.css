@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: rgba(47, 53, 66, 1);
+  }
+  div {
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 99, 72, 1);
+  }
+  div::before {
+    content: "dech53";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    background: rgba(55, 66, 250, 1);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition-duration: 2s;
+  }
+  div::after {
+    content: "online";
+    position: absolute;
+    bottom: 30%;
+    width: 200px;
+    text-align: center;
+    transform: translateX(-999px);
+    transition-duration: 1s;
+  }
+  div.move::after {
+    transform: translateX(0px);
+  }
+  div:hover::before {
+    transform: rotate(360deg);
+  }

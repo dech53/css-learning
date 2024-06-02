@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vw;
+    background: rgba(47, 53, 66,1.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(39, 174, 96,1.0);
+    animation-name: hd;
+    animation-duration: 5s;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4);
+}
+@keyframes hd {
+    0%{
+        background: rgba(52, 152, 219,1.0);
+    }
+    25%{
+        transform: scale(1.5);
+        background: rgba(41, 128, 185,1.0);
+    }
+    65%{
+        transform: scale(1);
+        background: rgba(46, 204, 113,1.0);
+    }
+    100%{
+        background: rgba(39, 174, 96,1.0);
+    }
+}
+input{
+    width: 95px;
+    height: 15px;
+
+}

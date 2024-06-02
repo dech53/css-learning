@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    background: #b1d5c8;
+    grid-template: 1fr/1fr;
+}
+button{
+    width: 200px;
+    height: 100px;
+    background: #fff799;
+    color: #c8161d;
+    border: solid 2px  currentColor ;
+    align-self: center;
+    justify-self: center;
+}
+button::after{
+    content:'';
+    width: 3px;
+    height: 3px;
+    display: inline-block;
+    animation-name: hd;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes hd {
+    from{
+        box-shadow: none;
+    }
+    30%{
+        box-shadow: 3px 0 0 currentColor;
+    }
+    60%{
+        box-shadow: 3px 0 0 currentColor,9px 0 0 currentColor;
+    }
+    90%{
+        box-shadow: 3px 0 0 currentColor,9px 0 0 currentColor,15px 0 0 currentColor;
+    }
+}

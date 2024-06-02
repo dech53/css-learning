@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vw;
+    background: rgba(47, 53, 66,1.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    background: rgba(44, 62, 80,1.0);
+    border: solid 2px white;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+input{
+    width: 95px;
+    height: 15px;
+
+}
+#big{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    background-color: rgba(39, 174, 96,1.0);
+    animation-name: position,background1,radius1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+main:hover #big{
+    animation-play-state: running;
+}
+
+@keyframes position {
+    25%{
+        transform: translateX(300px);
+    }
+    50%{
+        transform: translate(300px,300px);
+    }
+    75%{
+        transform: translateY(300px);
+    }
+}
+
+@keyframes background1 {
+    25%{
+    }
+    50%{
+        background: rgba(46, 204, 113,1.0);
+    }
+    75%{
+    }
+    25%,75%{
+        background:rgba(52, 152, 219,1.0);
+    }
+}
+@keyframes radius1 {
+    25%{
+    }
+    50%{
+        border-radius: 8px;
+    }
+    75%{
+    }
+    25%,75%{
+        border-radius: 50%;
+    }
+}

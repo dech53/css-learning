@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(112, 161, 255,1.0);
+    display: grid;
+
+
+}
+main{
+    width: 400px;
+    height: 200px;
+    background: red;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template: repeat(2,1fr)/repeat(4,1fr);
+    position: relative;
+}
+div{
+    text-align: center;
+    background: rgba(255, 71, 87,1.0);
+    border: solid 1px rgba(47, 53, 66,1.0);
+    box-sizing: border-box;
+    position: relative;
+}
+div:nth-child(1)::before{
+    content: 'start';
+    width: 100px;
+    left: 0;
+    top: 0;
+    height: 100px;
+    background: rgba(255, 107, 129,1.0);
+    position: absolute;
+    animation-timing-function: steps(1,start);
+}
+div:nth-child(5)::before{
+    content: 'end';
+    width: 100px;
+    left: 0;
+    top: 0;
+    height: 100px;
+    background: rgba(55, 66, 250,1.0);
+    position: absolute;
+    animation-timing-function: steps(4,end);
+}
+div:nth-child(5)::before,div:nth-child(1)::before{
+    animation-name: hd;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    z-index: 2;
+}
+@keyframes hd {
+    50%{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}

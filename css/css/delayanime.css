@@ -1,0 +1,25 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    display: flex;
+    width: 100vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(47, 53, 66,1.0);
+}
+div{
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 99, 72,1.0);
+    animation: hd 4s infinite;
+    animation-delay: 2s;
+    /* 过两秒执行动画 */
+}
+@keyframes hd {
+    to{
+        transform: scale(2);
+    }
+}
